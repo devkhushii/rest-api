@@ -23,5 +23,13 @@ def get_userid(user_id):
         
     return jsonify(user_data),200
 
+@app.route("/create-user",methods=["POST"])
+def create_user():
+    data=request.get_json()
+    
+    return jsonify(data), 201
+        
+
+
 if __name__=="__main__":
     app.run(debug=True)
